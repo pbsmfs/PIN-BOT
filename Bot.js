@@ -214,7 +214,7 @@ bot.on("message", async (ctx) => {
       await ctx.reply(`В моей базе данных нет такого пользователя...`)
     }
     else {
-      await ctx.reply(`@${userData[0].username} (${userData[0].known_as})\n\nИмя: ${userData[0].name}\n\nГруппа: ${userData[0].group}\n\nО себе: ${userData[0].message}`) //TODO REFACTOR
+      await ctx.reply(`@${userData[0].username} (${userData[0].known_as})\n\nИмя: ${userData[0].name}\n\nГруппа: ${userData[0].group}\n\nО себе: ${userData[0].message}`, {reply_markup: endMarkup}) //TODO REFACTOR
     }
   }
   else if (editing_step == 2) {
